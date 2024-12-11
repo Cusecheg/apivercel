@@ -1,18 +1,19 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "server.js",
-        "use": "@vercel/node",
-        "config": {
-          "includeFiles": [
-            "prisma/schema.prisma",
-            "node_modules/.prisma/client/**"
-          ]
-        }
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": [
+          "prisma/schema.prisma",
+          "node_modules/.prisma/client/**",
+          "prisma/migrations/**"
+        ]
       }
-    ],
-    "routes": [
-      { "src": "/api/(.*)", "dest": "/api/$1" }
-    ]
+    }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/$1" }
+  ]
 }
