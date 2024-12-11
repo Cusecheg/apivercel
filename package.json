@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx prisma generate && next build",
+    "build": "npx prisma generate",
     "v": "vercel dev",
     "dev": "set DEBUG=prisma:engine && nodemon server.js"
   },
